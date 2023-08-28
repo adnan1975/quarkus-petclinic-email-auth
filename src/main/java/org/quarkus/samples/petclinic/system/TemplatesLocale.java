@@ -54,8 +54,15 @@ public class TemplatesLocale {
         return Templates.createOrUpdateVisitForm(pet, visit, errors).setAttribute("locale", getConfiguredLocale());
     }
 
+
+    public TemplateInstance login(String error) {
+        return Templates.login(error).setAttribute("locale", getConfiguredLocale());
+    }
+
+
     protected Locale getConfiguredLocale() {
         return  Locale.getDefault();
     }
+
 
 }
