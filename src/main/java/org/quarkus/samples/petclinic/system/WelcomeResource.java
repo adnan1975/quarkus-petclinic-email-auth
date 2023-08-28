@@ -9,6 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import io.quarkus.qute.TemplateInstance;
+import io.quarkus.security.Authenticated;
 
 @Path("/")
 public class WelcomeResource {
@@ -19,7 +20,7 @@ public class WelcomeResource {
     @GET
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance get() {
-        return templates.welcome();
+        return templates.login(null);
     }
 
 }

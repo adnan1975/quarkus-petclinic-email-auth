@@ -99,4 +99,10 @@ public interface AppMessages {
     @Message("Something happened...")
     String something_wrong();
 
+    @Message("Invalid credentials. Please check your email or password and try again.")
+    String login_error();
+    
+    @Message("logout")
+    String logout();
+
 }

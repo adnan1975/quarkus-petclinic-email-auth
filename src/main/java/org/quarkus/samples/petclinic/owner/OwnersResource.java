@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.validation.ConstraintViolation;
@@ -36,6 +37,7 @@ public class OwnersResource {
 
     @GET
     @Path("/find")
+    @RolesAllowed({"user", "admin"})
     @Produces(MediaType.TEXT_HTML)
     /**
      * Renders the findOwners.html

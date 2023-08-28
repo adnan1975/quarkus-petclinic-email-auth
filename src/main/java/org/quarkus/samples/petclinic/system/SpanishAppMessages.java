@@ -121,4 +121,8 @@ public interface SpanishAppMessages extends AppMessages {
     @Message("Visitas Anteriores")
     String previous_visits();
 
+    @Override
+    @Message("Correo electrónico o contraseña incorrectos. Inténtelo de nuevo.")
+    String login_error();
+
 }
